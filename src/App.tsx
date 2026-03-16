@@ -6,6 +6,7 @@ import Gelaendeplan from "./components/Gelaendeplan";
 import EssenTrinken from "./components/EssenTrinken";
 import Vereine from "./components/Vereine";
 import Sponsoren from "./components/Sponsoren";
+import Galerie from "./components/Galerie";
 import Footer from "./components/Footer";
 import Impressum from "./components/Impressum";
 import Datenschutz from "./components/Datenschutz";
@@ -50,6 +51,7 @@ export default function App() {
         <Programm />
         <Gelaendeplan />
         <EssenTrinken />
+        <Galerie />
         <Vereine />
         <Sponsoren />
       </div>

@@ -4,6 +4,7 @@ const navLinks = [
   { href: "#programm", label: "Programm" },
   { href: "#gelaende", label: "Geländeplan" },
   { href: "#essen", label: "Essen & Trinken" },
+  { href: "#galerie", label: "Impressionen" },
   { href: "#vereine", label: "Vereine" },
   { href: "#sponsoren", label: "Sponsoren" },
 ];
