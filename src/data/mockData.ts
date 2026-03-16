@@ -105,10 +105,10 @@ export const vereine: Verein[] = [
   {
     id: 8,
     name: "Schule / Kita",
-    beschreibung: "Spaß für die Kleinen",
+    beschreibung: "Spaß für die Kleinen mit Schmink- & Basteltisch",
     logo: "/logos/vereine/kita.png",
     website: "https://www.villingen-schwenningen.de/bildung-soziales/kindertagesbetreuung/kitafinder/einrichtung/staedtische-kindertagesstaette-pfaffenweiler/",
-    essen: ["Candy Bar", "Eis", "Popcorn", "Schmink- & Basteltisch"],
+    essen: ["Candy Bar", "Eis", "Popcorn"],
     getraenke: ["Kindercocktails"],
   },
 ];
@@ -134,23 +134,23 @@ export const sponsoren: Sponsor[] = [
 
 export const programm: ProgrammPunkt[] = [
   // Samstag
-  { id: 1, zeit: "14:00", titel: "Festbeginn", beschreibung: "Spielestationen ab 14 Uhr, Schminken 14–18 Uhr", ort: "Bühne", tag: "samstag", typ: "programm" },
+  { id: 1, zeit: "14:00", titel: "Festbeginn", beschreibung: "", ort: "Bühne", tag: "samstag", typ: "programm" },
   { id: 2, zeit: "14:30", titel: "Fassanstich mit Freibier", beschreibung: "Offizieller Start des Dorffestes", ort: "Bühne", tag: "samstag", typ: "programm" },
   { id: 3, zeit: "15:00", titel: "Fanfarenzug der Glonki Gilde", beschreibung: "Fanfarenzug aus Villingen", ort: "Bühne", tag: "samstag", typ: "auftritt" },
-  { id: 4, zeit: "15:30", titel: "Midi Glonkinchen Glonki Gilde", beschreibung: "Die kleinen Glonkinchen", ort: "Bühne", tag: "samstag", typ: "auftritt" },
-  { id: 5, zeit: "15:45", titel: "Auftritt Kindertagesstätte", beschreibung: "Kindertagesstätte Pfaffenweiler", ort: "Bühne", tag: "samstag", typ: "auftritt" },
+  { id: 4, zeit: "15:30", titel: "Glonkinchen", beschreibung: "Die Glonkinchen der Glonki Gilde", ort: "Bühne", tag: "samstag", typ: "auftritt" },
+  { id: 5, zeit: "15:45", titel: "Kindertagesstätte", beschreibung: "Auftritt der Kindertagesstätte Pfaffenweiler", ort: "Bühne", tag: "samstag", typ: "auftritt" },
   { id: 6, zeit: "16:15", titel: "Tanz-AG Grundschule", beschreibung: "Auftritt der Tanz-AG der Grundschule Pfaffenweiler", ort: "Bühne", tag: "samstag", typ: "auftritt" },
-  { id: 7, zeit: "16:45", titel: "Auftritt Grundschule", beschreibung: "Grundschule Pfaffenweiler", ort: "Bühne", tag: "samstag", typ: "auftritt" },
-  { id: 8, zeit: "17:30", titel: "Mini Disco", beschreibung: "Ca. 30 Minuten Mini Disco", ort: "Bühne", tag: "samstag", typ: "programm" },
+  { id: 7, zeit: "16:45", titel: "Grundschule", beschreibung: "Auftritt der Grundschule Pfaffenweiler", ort: "Bühne", tag: "samstag", typ: "auftritt" },
+  { id: 8, zeit: "17:30", titel: "Mini Disco", beschreibung: "Eine Disco für unsere kleinen Gäste", ort: "Bühne", tag: "samstag", typ: "programm" },
   { id: 9, zeit: "18:30", titel: "Krawazi Ramblers", beschreibung: "Krawazi Ramblers der Glonki Gilde Villingen", ort: "Bühne", tag: "samstag", typ: "band" },
-  { id: 10, zeit: "20:30", titel: "Live-Band / DJ", beschreibung: "Abendprogramm mit Live-Musik", ort: "Bühne", tag: "samstag", typ: "band" },
+  { id: 10, zeit: "20:30", titel: "Live-Band / DJ", beschreibung: "noch offen", ort: "Bühne", tag: "samstag", typ: "band" },
   // Sonntag
-  { id: 11, zeit: "11:00", titel: "Festbeginn", beschreibung: "Alle Stände öffnen", ort: "Festgelände", tag: "sonntag", typ: "programm" },
-  { id: 12, zeit: "11:30", titel: "Frühschoppen", beschreibung: "Evtl. mit den Schwarzwaldschlawinern", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
-  { id: 13, zeit: "12:00", titel: "Manne und seine Gartenfestspiele", beschreibung: "Unterhaltung bis 16 Uhr", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
+  { id: 11, zeit: "11:00", titel: "Festbeginn", beschreibung: "", ort: "Festgelände", tag: "sonntag", typ: "programm" },
+  { id: 12, zeit: "11:30", titel: "Frühschoppen", beschreibung: "evtl. mit den Schwarzwaldschlawinern", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
+  { id: 13, zeit: "12:00", titel: "Manne und seine Gartenfestspiele", beschreibung: "Hier sollte stehen, was das genau ist?", ort: "Grundschule / Festgelände", tag: "sonntag", typ: "programm" },
   { id: 14, zeit: "14:00", titel: "Kinderprogramm", beschreibung: "Kinderspielzeugflohmarkt auf dem Pausenhof, Spielestationen", ort: "Grundschule / Festgelände", tag: "sonntag", typ: "programm" },
   { id: 15, zeit: "14:00", titel: "Villinger Alphörner", beschreibung: "Alphornklänge auf dem Festgelände", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
-  { id: 16, zeit: "14:30", titel: "Musik- & Trachtenkapelle", beschreibung: "Auftritt bis ca. 16 Uhr", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
+  { id: 16, zeit: "14:30", titel: "Musik- & Trachtenkapelle", beschreibung: "Auftritt der Musik- & Trachtenkapelle Pfaffenweiler", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
   { id: 17, zeit: "17:00", titel: "Line Dance 'Wolf Creek Liners'", beschreibung: "Line Dance Gruppe aus Pfaffenweiler", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
 ];
 
