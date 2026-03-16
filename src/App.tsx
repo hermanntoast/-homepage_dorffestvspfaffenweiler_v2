@@ -36,10 +36,12 @@ export default function App() {
   if (page === "datenschutz") return <><NavbarSimple /><Datenschutz /></>;
 
   return (
-    <div
-      className="relative bg-fixed bg-cover bg-center"
-      style={{ backgroundImage: "url(/gelaende1.jpg)" }}
-    >
+    <div className="relative">
+      {/* Fixed background image as separate element - avoids mobile bg-fixed bugs */}
+      <div
+        className="fixed inset-0 -z-10 bg-cover"
+        style={{ backgroundImage: "url(/gelaende1.jpg)", backgroundPosition: "center 70%" }}
+      />
       <Navbar />
       <Hero />
 

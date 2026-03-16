@@ -13,14 +13,14 @@ export default function Sponsoren() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           {sponsoren.map((sponsor) => (
             <a
               key={sponsor.id}
               href={sponsor.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center p-5 sm:p-6 rounded-2xl border-2 border-gray-100 bg-gray-50 hover:shadow-lg hover:border-gray-200 transition-all hover:-translate-y-0.5"
+              className="flex items-center justify-center w-[calc(50%-8px)] sm:w-[calc(33.333%-11px)] lg:w-[calc(20%-13px)] p-5 sm:p-6 rounded-2xl border-2 border-gray-100 bg-gray-50 hover:shadow-lg hover:border-gray-200 transition-all hover:-translate-y-0.5"
             >
               <img
                 src={sponsor.logo}

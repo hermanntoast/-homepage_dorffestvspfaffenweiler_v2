@@ -129,6 +129,7 @@ export const sponsoren: Sponsor[] = [
   { id: 13, name: "Andris", logo: "/logos/sponsoren/Logo_Andris.png", website: "#" },
   { id: 14, name: "Kieninger", logo: "/logos/sponsoren/Logo_Kieninger.jpg", website: "#" },
   { id: 15, name: "ASPO", logo: "/logos/sponsoren/Logo_ASPO.jpg", website: "#" },
+  { id: 16, name: "Luxcode", logo: "/logos/sponsoren/Logo_luxcode.png", website: "https://luxcode.io" },
 ];
 
 export const programm: ProgrammPunkt[] = [
