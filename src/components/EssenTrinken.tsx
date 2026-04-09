@@ -34,32 +34,57 @@ export default function EssenTrinken() {
                   <h4 className="text-[10px] font-bold text-orange-400 uppercase tracking-widest mb-2">
                     Essen
                   </h4>
-                  <div className="flex flex-wrap gap-1.5">
-                    {verein.essen.map((item) => (
-                      <span
-                        key={item}
-                        className="px-2.5 py-1 bg-orange-50 text-orange-800 rounded-lg text-xs font-medium"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
+                  {verein.essen.length > 0 ? (
+                    <div className="flex flex-wrap gap-1.5">
+                      {verein.essen.map((item) => (
+                        <span
+                          key={item}
+                          className="px-2.5 py-1 bg-orange-50 text-orange-800 rounded-lg text-xs font-medium"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="text-xs text-gray-400 italic">Wird noch bekannt gegeben</p>
+                  )}
                 </div>
                 <div>
                   <h4 className="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-2">
                     Getränke
                   </h4>
-                  <div className="flex flex-wrap gap-1.5">
-                    {verein.getraenke.map((item) => (
-                      <span
-                        key={item}
-                        className="px-2.5 py-1 bg-blue-50 text-blue-800 rounded-lg text-xs font-medium"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
+                  {verein.getraenke.length > 0 ? (
+                    <div className="flex flex-wrap gap-1.5">
+                      {verein.getraenke.map((item) => (
+                        <span
+                          key={item}
+                          className="px-2.5 py-1 bg-blue-50 text-blue-800 rounded-lg text-xs font-medium"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="text-xs text-gray-400 italic">Wird noch bekannt gegeben</p>
+                  )}
                 </div>
+                {verein.angebot && verein.angebot.length > 0 && (
+                  <div>
+                    <h4 className="text-[10px] font-bold text-green-500 uppercase tracking-widest mb-2">
+                      Angebot
+                    </h4>
+                    <div className="flex flex-wrap gap-1.5">
+                      {verein.angebot.map((item) => (
+                        <span
+                          key={item}
+                          className="px-2.5 py-1 bg-green-50 text-green-800 rounded-lg text-xs font-medium"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}

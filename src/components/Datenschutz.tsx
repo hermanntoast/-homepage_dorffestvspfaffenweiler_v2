@@ -104,14 +104,35 @@ export default function Datenschutz() {
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-gray-900 mb-2">5. Cookies</h2>
+            <h2 className="text-lg font-bold text-gray-900 mb-2">5. Webanalyse</h2>
             <p>
-              Diese Website verwendet keine Cookies. Es werden keine Tracking- oder Analyse-Tools eingesetzt.
+              Diese Website nutzt <strong>Umami</strong>, ein datenschutzfreundliches Open-Source-Analysetool.
+              Umami erfasst anonymisierte Nutzungsdaten wie Seitenaufrufe, Verweildauer, Herkunftsseiten
+              (Referrer), verwendete Gerätetypen und ungefähren Standort (auf Länderebene).
+            </p>
+            <p className="mt-2">
+              <strong>Umami setzt keine Cookies</strong> und speichert keine personenbezogenen Daten.
+              Es werden keine IP-Adressen gespeichert oder an Dritte weitergegeben.
+              Die Erfassung erfolgt auf Grundlage unseres berechtigten Interesses an der statistischen
+              Auswertung des Nutzungsverhaltens zur Optimierung unserer Website (Art. 6 Abs. 1 lit. f DSGVO).
+            </p>
+            <p className="mt-2">
+              Weitere Informationen finden Sie unter:{" "}
+              <a href="https://umami.is/privacy" target="_blank" rel="noopener noreferrer" className="text-primary underline">
+                Umami Privacy Policy
+              </a>.
             </p>
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-gray-900 mb-2">6. Externe Links</h2>
+            <h2 className="text-lg font-bold text-gray-900 mb-2">6. Cookies</h2>
+            <p>
+              Diese Website verwendet keine Cookies.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-lg font-bold text-gray-900 mb-2">7. Externe Links</h2>
             <p>
               Diese Website enthält Links zu externen Websites (z.B. Vereinswebseiten, Sponsoren). Beim Anklicken
               dieser Links verlassen Sie unsere Website. Wir haben keinen Einfluss auf die Datenverarbeitung durch
@@ -121,7 +142,7 @@ export default function Datenschutz() {
           </section>
 
           <section>
-            <h2 className="text-lg font-bold text-gray-900 mb-2">7. Ihre Rechte</h2>
+            <h2 className="text-lg font-bold text-gray-900 mb-2">8. Ihre Rechte</h2>
             <p>Sie haben jederzeit das Recht:</p>
             <ul className="list-disc list-inside mt-2 space-y-1">
               <li>Auskunft über Ihre bei uns gespeicherten personenbezogenen Daten zu erhalten (Art. 15 DSGVO)</li>
