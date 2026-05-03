@@ -59,8 +59,7 @@ export const vereine: Verein[] = [
     logo: "/logos/vereine/kjg.png",
     website: "https://www.kjg-pfaffenweiler.de",
     essen: ["Pommes", "Grill- & Currywurst", "Burger", "Steak", "Striebele", "Crepes"],
-    getraenke: ["Alkoholfreie Getränke"],
-    angebot: ["Motto: Alm on Fire", "Bar (Samstag ab 18 Uhr)"],
+    getraenke: ["Alkoholfreie Getränke", "Bar (Samstag ab 18 Uhr)"],
   },
   {
     id: 2,
@@ -79,7 +78,6 @@ export const vereine: Verein[] = [
     website: "https://www.wolfbachrolli.org/",
     essen: ["Süßigkeiten", "Knabberzeug"],
     getraenke: ["Wein-Slushi", "Slushi", "Alkoholfreie Getränke"],
-    angebot: ["Grillhütte", "Bühnenaufbau & Beleuchtung"],
   },
   {
     id: 4,
@@ -158,15 +156,15 @@ export const programm: ProgrammPunkt[] = [
   { id: 5, zeit: "15:45", titel: "Auftritt Kindertagesstätte Pfaffenweiler", beschreibung: "", ort: "Bühne", tag: "samstag", typ: "auftritt" },
   { id: 6, zeit: "16:15", titel: "Tanz-AG der Grundschule Pfaffenweiler", beschreibung: "", ort: "Bühne", tag: "samstag", typ: "auftritt" },
   { id: 7, zeit: "16:45", titel: "Auftritt der Grundschule Pfaffenweiler", beschreibung: "", ort: "Bühne", tag: "samstag", typ: "auftritt" },
-  { id: 8, zeit: "17:30", titel: "Mini Disco", beschreibung: "ca. 30 min", ort: "Bühne", tag: "samstag", typ: "programm" },
-  { id: 9, zeit: "20:00", titel: "Klosterbrass", beschreibung: "Live-Auftritt ca. 1,5 Stunden", ort: "Bühne", tag: "samstag", typ: "band", logo: "/logos/bands/klosterbrass.jpeg" },
+  { id: 8, zeit: "17:30", titel: "Mini Disco", beschreibung: "", ort: "Bühne", tag: "samstag", typ: "programm" },
+  { id: 9, zeit: "20:00", titel: "Klosterbrass", beschreibung: "", ort: "Bühne", tag: "samstag", typ: "band", logo: "/logos/bands/klosterbrass.jpeg" },
   { id: 10, zeit: "21:30", titel: "Nachtprogramm", beschreibung: "Musikalischer Ausklang über die KjG", ort: "Bühne", tag: "samstag", typ: "programm" },
   // Sonntag
   { id: 11, zeit: "11:00", titel: "Festbeginn", beschreibung: "", ort: "Festgelände", tag: "sonntag", typ: "programm" },
-  { id: 12, zeit: "11:30", titel: "Frühschoppen mit den Schwarzwaldschlawinern", beschreibung: "bis 13:30 Uhr", ort: "Bühne", tag: "sonntag", typ: "band", logo: "/logos/bands/schwarzwaldschlawiner.jpeg" },
+  { id: 12, zeit: "11:30", titel: "Frühschoppen mit den Schwarzwaldschlawinern", beschreibung: "", ort: "Bühne", tag: "sonntag", typ: "band", logo: "/logos/bands/schwarzwaldschlawiner.jpeg" },
   { id: 13, zeit: "14:00", titel: "Villinger Alphörner", beschreibung: "", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
-  { id: 14, zeit: "14:30", titel: "Musik- & Trachtenkapelle Pfaffenweiler", beschreibung: "bis 16:00 Uhr", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
-  { id: 15, zeit: "16:15", titel: "Parcours", beschreibung: "bis 16:45 Uhr", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
+  { id: 14, zeit: "14:30", titel: "Musik- & Trachtenkapelle Pfaffenweiler", beschreibung: "", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
+  { id: 15, zeit: "16:15", titel: "Parcours", beschreibung: "", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
   { id: 16, zeit: "17:00", titel: "Line Dance „Wolf Creek Liners“", beschreibung: "Line Dance Gruppe aus Pfaffenweiler", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
 ];
 

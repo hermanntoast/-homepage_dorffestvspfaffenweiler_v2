@@ -1,7 +1,42 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Plakat() {
   const [zoom, setZoom] = useState(false);
+  const [canShare, setCanShare] = useState(false);
+
+  useEffect(() => {
+    setCanShare(typeof navigator !== "undefined" && typeof navigator.share === "function");
+  }, []);
+
+  const handleShare = async () => {
+    const title = "Dorffest VS-Pfaffenweiler 2026";
+    const text =
+      "🎉 Dorffest VS-Pfaffenweiler – 20. & 21. Juni 2026!\n" +
+      "Zwei Tage Live-Musik, leckeres Essen aus allen Vereinen, Kinderprogramm und gute Laune.\n" +
+      "Alle Infos hier:";
+    const url = "https://dorffest-vs-pfaffenweiler.de";
+
+    try {
+      // Versuche Plakat als Datei mitzuschicken
+      const response = await fetch("/plakat.jpeg");
+      const blob = await response.blob();
+      const file = new File([blob], "Dorffest-Pfaffenweiler-2026.jpeg", { type: blob.type });
+
+      const dataWithFile = { title, text, url, files: [file] };
+      if (navigator.canShare && navigator.canShare(dataWithFile)) {
+        await navigator.share(dataWithFile);
+        return;
+      }
+    } catch {
+      // Fall-through: Bild konnte nicht geladen oder geteilt werden
+    }
+
+    try {
+      await navigator.share({ title, text, url });
+    } catch {
+      // Vom Nutzer abgebrochen – ignorieren
+    }
+  };
 
   return (
     <section id="plakat" className="py-20 sm:py-28 relative overflow-hidden">
@@ -79,12 +114,24 @@ export default function Plakat() {
                 </svg>
                 Plakat herunterladen
               </a>
-              <a
-                href="#programm"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-200 hover:border-primary text-gray-700 hover:text-primary font-semibold rounded-xl transition-all hover:scale-105"
-              >
-                Zum Programm
-              </a>
+              {canShare ? (
+                <button
+                  onClick={handleShare}
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-200 hover:border-primary text-gray-700 hover:text-primary font-semibold rounded-xl transition-all hover:scale-105"
+                >
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                  </svg>
+                  Teilen
+                </button>
+              ) : (
+                <a
+                  href="#programm"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-gray-200 hover:border-primary text-gray-700 hover:text-primary font-semibold rounded-xl transition-all hover:scale-105"
+                >
+                  Zum Programm
+                </a>
+              )}
             </div>
           </div>
         </div>
