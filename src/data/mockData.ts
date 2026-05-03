@@ -158,7 +158,7 @@ export const programm: ProgrammPunkt[] = [
   { id: 7, zeit: "16:45", titel: "Auftritt der Grundschule Pfaffenweiler", beschreibung: "", ort: "Bühne", tag: "samstag", typ: "auftritt" },
   { id: 8, zeit: "17:30", titel: "Mini Disco", beschreibung: "", ort: "Bühne", tag: "samstag", typ: "programm" },
   { id: 9, zeit: "20:00", titel: "Klosterbrass", beschreibung: "", ort: "Bühne", tag: "samstag", typ: "band", logo: "/logos/bands/klosterbrass.jpeg" },
-  { id: 10, zeit: "21:30", titel: "Nachtprogramm", beschreibung: "Musikalischer Ausklang über die KjG", ort: "Bühne", tag: "samstag", typ: "programm" },
+  { id: 10, zeit: "21:30", titel: "Disko", beschreibung: "Musikalischer Ausklang über die KjG", ort: "Bühne", tag: "samstag", typ: "programm" },
   // Sonntag
   { id: 11, zeit: "11:00", titel: "Festbeginn", beschreibung: "", ort: "Festgelände", tag: "sonntag", typ: "programm" },
   { id: 12, zeit: "11:30", titel: "Frühschoppen mit den Schwarzwaldschlawinern", beschreibung: "", ort: "Bühne", tag: "sonntag", typ: "band", logo: "/logos/bands/schwarzwaldschlawiner.jpeg" },
