@@ -104,7 +104,7 @@ export const vereine: Verein[] = [
     logo: "/logos/vereine/tennis.png",
     website: "https://www.tc-1980-pfaffenweiler.de/",
     essen: ["Heiße Sandwiches", "Antipastiteller"],
-    getraenke: ["Wein (Sa & So)", "Veneziano", "Sommerschorle"],
+    getraenke: ["Wein", "Veneziano", "Sommerschorle"],
   },
   {
     id: 7,
