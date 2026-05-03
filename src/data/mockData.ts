@@ -24,6 +24,18 @@ export interface ProgrammPunkt {
   ort: string;
   tag: "samstag" | "sonntag";
   typ: "auftritt" | "band" | "programm";
+  logo?: string;
+}
+
+export interface GanztaegigPunkt {
+  id: number;
+  von: string;
+  bis: string;
+  titel: string;
+  beschreibung?: string;
+  ort?: string;
+  tag: "samstag" | "sonntag";
+  icon: string;
 }
 
 export interface GelaendeBereich {
@@ -46,9 +58,9 @@ export const vereine: Verein[] = [
     beschreibung: "Katholische junge Gemeinde",
     logo: "/logos/vereine/kjg.png",
     website: "https://www.kjg-pfaffenweiler.de",
-    essen: ["Pommes", "Grill- & Currywurst", "Burger", "Steak", "Striebele"],
-    getraenke: ["Bar", "Festgetränke"],
-    angebot: ["Motto: Alm on Fire"],
+    essen: ["Pommes", "Grill- & Currywurst", "Burger", "Steak", "Striebele", "Crepes"],
+    getraenke: ["Alkoholfreie Getränke"],
+    angebot: ["Motto: Alm on Fire", "Bar (Samstag ab 18 Uhr)"],
   },
   {
     id: 2,
@@ -65,8 +77,8 @@ export const vereine: Verein[] = [
     beschreibung: "Narrenzunft",
     logo: "/logos/vereine/narrenverein.png",
     website: "https://www.wolfbachrolli.org/",
-    essen: [],
-    getraenke: ["Wein-Slushi", "Slushi", "Festgetränke"],
+    essen: ["Süßigkeiten", "Knabberzeug"],
+    getraenke: ["Wein-Slushi", "Slushi", "Alkoholfreie Getränke"],
     angebot: ["Grillhütte", "Bühnenaufbau & Beleuchtung"],
   },
   {
@@ -84,8 +96,8 @@ export const vereine: Verein[] = [
     beschreibung: "Musik- & Trachtenkapelle",
     logo: "/logos/vereine/mut.png",
     website: "#",
-    essen: [],
-    getraenke: [],
+    essen: ["Cevapcici im Wecken", "Gebackener Camembert im Wecken"],
+    getraenke: ["Alkoholfreie Getränke", "Flaschenbier", "Weinschorle (Bollegued)"],
   },
   {
     id: 6,
@@ -93,9 +105,8 @@ export const vereine: Verein[] = [
     beschreibung: "Tennisclub",
     logo: "/logos/vereine/tennis.png",
     website: "https://www.tc-1980-pfaffenweiler.de/",
-    essen: [],
-    getraenke: ["Weinstand Sa & So"],
-    angebot: ["Weinstand"],
+    essen: ["Heiße Sandwiches", "Antipastiteller"],
+    getraenke: ["Wein (Sa & So)", "Veneziano", "Sommerschorle"],
   },
   {
     id: 7,
@@ -104,7 +115,7 @@ export const vereine: Verein[] = [
     logo: "/logos/vereine/landfrauen.png",
     website: "https://wolfbachbienen.jimdofree.com/aktuelles/",
     essen: ["Kuchen", "Salatbowl", "Beilagensalat", "Flammkuchen (3 Sorten)"],
-    getraenke: ["Kaffee", "Eiskaffee"],
+    getraenke: ["Kaffee"],
   },
   {
     id: 8,
@@ -113,14 +124,15 @@ export const vereine: Verein[] = [
     logo: "/logos/vereine/kita.png",
     website: "https://www.villingen-schwenningen.de/bildung-soziales/kindertagesbetreuung/kitafinder/einrichtung/staedtische-kindertagesstaette-pfaffenweiler/",
     essen: ["Candy Bar", "Eis", "Popcorn"],
-    getraenke: ["Kindercocktails"],
-    angebot: ["Schmink- & Basteltisch", "Spielstraße am Samstag"],
+    getraenke: ["Kindercocktails", "Alkoholfreier Aperol"],
   },
 ];
 
 export const sponsoren: Sponsor[] = [
-  // { id: 1, name: "Kettner", logo: "/logos/sponsoren/Logo_Kettner.png", website: "#" },
-  // { id: 2, name: "BaarFoot", logo: "/logos/sponsoren/Logo_BaarFoot.png", website: "#" },
+  { id: 1, name: "BaarFoot", logo: "/logos/sponsoren/Logo_BaarFoot.png", website: "#" },
+  { id: 2, name: "Luxcode", logo: "/logos/sponsoren/Logo_luxcode.png", website: "https://luxcode.io" },
+  { id: 3, name: "Heyn", logo: "/logos/sponsoren/Logo_Heyn.png", website: "#" },
+  // { id: 4, name: "Kettner", logo: "/logos/sponsoren/Logo_Kettner.png", website: "#" },
   // { id: 3, name: "Volksbank", logo: "/logos/sponsoren/Logo_VoBa.png", website: "#" },
   // { id: 4, name: "Merz", logo: "/logos/sponsoren/Logo_Merz.png", website: "#" },
   // { id: 5, name: "Neininger", logo: "/logos/sponsoren/Logo_Neininger.png", website: "#" },
@@ -139,24 +151,32 @@ export const sponsoren: Sponsor[] = [
 
 export const programm: ProgrammPunkt[] = [
   // Samstag
-  // { id: 1, zeit: "14:00", titel: "Festbeginn", beschreibung: "", ort: "Bühne", tag: "samstag", typ: "programm" },
-  // { id: 2, zeit: "14:30", titel: "Fassanstich mit Freibier", beschreibung: "Offizieller Start des Dorffestes", ort: "Bühne", tag: "samstag", typ: "programm" },
-  // { id: 3, zeit: "15:00", titel: "Fanfarenzug der Glonki Gilde", beschreibung: "Fanfarenzug aus Villingen", ort: "Bühne", tag: "samstag", typ: "auftritt" },
-  // { id: 4, zeit: "15:30", titel: "Glonkinchen", beschreibung: "Die Glonkinchen der Glonki Gilde", ort: "Bühne", tag: "samstag", typ: "auftritt" },
-  // { id: 5, zeit: "15:45", titel: "Kindertagesstätte", beschreibung: "Auftritt der Kindertagesstätte Pfaffenweiler", ort: "Bühne", tag: "samstag", typ: "auftritt" },
-  // { id: 6, zeit: "16:15", titel: "Tanz-AG Grundschule", beschreibung: "Auftritt der Tanz-AG der Grundschule Pfaffenweiler", ort: "Bühne", tag: "samstag", typ: "auftritt" },
-  // { id: 7, zeit: "16:45", titel: "Grundschule", beschreibung: "Auftritt der Grundschule Pfaffenweiler", ort: "Bühne", tag: "samstag", typ: "auftritt" },
-  // { id: 8, zeit: "17:30", titel: "Mini Disco", beschreibung: "Eine Disco für unsere kleinen Gäste", ort: "Bühne", tag: "samstag", typ: "programm" },
-  // { id: 9, zeit: "18:30", titel: "Krawazi Ramblers", beschreibung: "Krawazi Ramblers der Glonki Gilde Villingen", ort: "Bühne", tag: "samstag", typ: "band" },
-  // { id: 10, zeit: "20:30", titel: "Live-Band / DJ", beschreibung: "noch offen", ort: "Bühne", tag: "samstag", typ: "band" },
+  { id: 1, zeit: "14:00", titel: "Festbeginn", beschreibung: "", ort: "Festgelände", tag: "samstag", typ: "programm" },
+  { id: 2, zeit: "14:30", titel: "Fassanstich mit Freibier", beschreibung: "Offizieller Start des Dorffestes", ort: "Bühne", tag: "samstag", typ: "programm" },
+  { id: 3, zeit: "15:00", titel: "Fanfarenzug der Glonki Gilde", beschreibung: "", ort: "Bühne", tag: "samstag", typ: "auftritt" },
+  { id: 4, zeit: "15:30", titel: "Midi Glonkinchen der Glonki Gilde", beschreibung: "", ort: "Bühne", tag: "samstag", typ: "auftritt" },
+  { id: 5, zeit: "15:45", titel: "Auftritt Kindertagesstätte Pfaffenweiler", beschreibung: "", ort: "Bühne", tag: "samstag", typ: "auftritt" },
+  { id: 6, zeit: "16:15", titel: "Tanz-AG der Grundschule Pfaffenweiler", beschreibung: "", ort: "Bühne", tag: "samstag", typ: "auftritt" },
+  { id: 7, zeit: "16:45", titel: "Auftritt der Grundschule Pfaffenweiler", beschreibung: "", ort: "Bühne", tag: "samstag", typ: "auftritt" },
+  { id: 8, zeit: "17:30", titel: "Mini Disco", beschreibung: "ca. 30 min", ort: "Bühne", tag: "samstag", typ: "programm" },
+  { id: 9, zeit: "20:00", titel: "Klosterbrass", beschreibung: "Live-Auftritt ca. 1,5 Stunden", ort: "Bühne", tag: "samstag", typ: "band", logo: "/logos/bands/klosterbrass.jpeg" },
+  { id: 10, zeit: "21:30", titel: "Nachtprogramm", beschreibung: "Musikalischer Ausklang über die KjG", ort: "Bühne", tag: "samstag", typ: "programm" },
   // Sonntag
-  // { id: 11, zeit: "11:00", titel: "Festbeginn", beschreibung: "", ort: "Festgelände", tag: "sonntag", typ: "programm" },
-  // { id: 12, zeit: "11:30", titel: "Frühschoppen", beschreibung: "evtl. mit den Schwarzwaldschlawinern", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
-  // { id: 13, zeit: "12:00", titel: "Manne und seine Gartenfestspiele", beschreibung: "Hier sollte stehen, was das genau ist?", ort: "Grundschule / Festgelände", tag: "sonntag", typ: "programm" },
-  // { id: 14, zeit: "14:00", titel: "Kinderprogramm", beschreibung: "Kinderspielzeugflohmarkt auf dem Pausenhof, Spielestationen", ort: "Grundschule / Festgelände", tag: "sonntag", typ: "programm" },
-  // { id: 15, zeit: "14:00", titel: "Villinger Alphörner", beschreibung: "Alphornklänge auf dem Festgelände", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
-  // { id: 16, zeit: "14:30", titel: "Musik- & Trachtenkapelle", beschreibung: "Auftritt der Musik- & Trachtenkapelle Pfaffenweiler", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
-  // { id: 17, zeit: "17:00", titel: "Line Dance 'Wolf Creek Liners'", beschreibung: "Line Dance Gruppe aus Pfaffenweiler", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
+  { id: 11, zeit: "11:00", titel: "Festbeginn", beschreibung: "", ort: "Festgelände", tag: "sonntag", typ: "programm" },
+  { id: 12, zeit: "11:30", titel: "Frühschoppen mit den Schwarzwaldschlawinern", beschreibung: "bis 13:30 Uhr", ort: "Bühne", tag: "sonntag", typ: "band", logo: "/logos/bands/schwarzwaldschlawiner.jpeg" },
+  { id: 13, zeit: "14:00", titel: "Villinger Alphörner", beschreibung: "", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
+  { id: 14, zeit: "14:30", titel: "Musik- & Trachtenkapelle Pfaffenweiler", beschreibung: "bis 16:00 Uhr", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
+  { id: 15, zeit: "16:15", titel: "Parcours", beschreibung: "bis 16:45 Uhr", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
+  { id: 16, zeit: "17:00", titel: "Line Dance „Wolf Creek Liners“", beschreibung: "Line Dance Gruppe aus Pfaffenweiler", ort: "Bühne", tag: "sonntag", typ: "auftritt" },
+];
+
+export const ganztaegig: GanztaegigPunkt[] = [
+  // Samstag
+  { id: 1, von: "14:00", bis: "16:45", titel: "Spielestationen", beschreibung: "Spaß für die Kleinen", tag: "samstag", icon: "🎲" },
+  { id: 2, von: "14:00", bis: "18:00", titel: "Kinderschminken", beschreibung: "Bunte Gesichter für alle Kinder", tag: "samstag", icon: "🎨" },
+  // Sonntag
+  { id: 3, von: "12:00", bis: "16:00", titel: "Manne und seine Gartenfestspiele", beschreibung: "Unterhaltung auf dem Festgelände", tag: "sonntag", icon: "🎪" },
+  { id: 4, von: "14:00", bis: "16:00", titel: "Kinderspielzeugflohmarkt", beschreibung: "Pausenhof Grundschule Pfaffenweiler", tag: "sonntag", icon: "🧸" },
 ];
 
 // Geländeplan basierend auf dem offiziellen Stellplan

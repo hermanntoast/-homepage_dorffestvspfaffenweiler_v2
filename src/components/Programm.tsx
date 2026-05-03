@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { programm } from "../data/mockData";
+import { programm, ganztaegig } from "../data/mockData";
 
 const typColors = {
   band: "bg-purple-100 text-purple-800",
@@ -16,6 +16,7 @@ const typLabels = {
 export default function Programm() {
   const [tag, setTag] = useState<"samstag" | "sonntag">("samstag");
   const filtered = programm.filter((p) => p.tag === tag);
+  const filteredGanztaegig = ganztaegig.filter((p) => p.tag === tag);
   const hatProgramm = programm.length > 0;
 
   return (
@@ -57,6 +58,36 @@ export default function Programm() {
                 </button>
               </div>
             </div>
+
+            {/* Ganztägige Programmpunkte */}
+            {filteredGanztaegig.length > 0 && (
+              <div className="mb-10">
+                <h3 className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4 text-center">
+                  Den ganzen Tag über
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {filteredGanztaegig.map((p) => (
+                    <div
+                      key={p.id}
+                      className="flex items-center gap-4 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 border border-amber-200/60 rounded-xl px-4 py-3 shadow-sm"
+                    >
+                      <div className="text-3xl">{p.icon}</div>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-baseline gap-2 flex-wrap">
+                          <h4 className="font-bold text-gray-900 leading-tight">{p.titel}</h4>
+                        </div>
+                        <p className="text-xs text-amber-700 font-semibold mt-0.5">
+                          {p.von} – {p.bis} Uhr
+                        </p>
+                        {p.beschreibung && (
+                          <p className="text-xs text-gray-600 mt-0.5">{p.beschreibung}</p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Timeline */}
             <div className="relative">
@@ -103,24 +134,37 @@ export default function Programm() {
                     </div>
 
                     <div className="flex-1 bg-gray-50 rounded-xl p-4 sm:p-5 hover:bg-gray-100 transition-colors">
-                      <div className="flex flex-wrap items-start gap-2 mb-2">
-                        <h3 className="text-lg font-bold text-gray-900">
-                          {punkt.titel}
-                        </h3>
-                        <span
-                          className={`px-2.5 py-0.5 rounded-full text-xs font-semibold ${
-                            typColors[punkt.typ]
-                          }`}
-                        >
-                          {typLabels[punkt.typ]}
-                        </span>
+                      <div className="flex items-start gap-4">
+                        {punkt.logo && (
+                          <img
+                            src={punkt.logo}
+                            alt={punkt.titel}
+                            className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 object-contain rounded-lg bg-white border border-gray-200 shadow-sm p-1"
+                          />
+                        )}
+                        <div className="flex-1 min-w-0">
+                          <div className="flex flex-wrap items-start gap-2 mb-2">
+                            <h3 className="text-lg font-bold text-gray-900">
+                              {punkt.titel}
+                            </h3>
+                            <span
+                              className={`px-2.5 py-0.5 rounded-full text-xs font-semibold ${
+                                typColors[punkt.typ]
+                              }`}
+                            >
+                              {typLabels[punkt.typ]}
+                            </span>
+                          </div>
+                          {punkt.beschreibung && (
+                            <p className="text-gray-600 text-sm mb-1">
+                              {punkt.beschreibung}
+                            </p>
+                          )}
+                          <p className="text-gray-400 text-xs font-medium">
+                            {punkt.ort}
+                          </p>
+                        </div>
                       </div>
-                      <p className="text-gray-600 text-sm mb-1">
-                        {punkt.beschreibung}
-                      </p>
-                      <p className="text-gray-400 text-xs font-medium">
-                        {punkt.ort}
-                      </p>
                     </div>
                   </div>
                   );
@@ -136,7 +180,7 @@ export default function Programm() {
             </h3>
             <p className="text-gray-600 mb-2 leading-relaxed">
               Das Programm für das Dorffest 2026 wird gerade zusammengestellt.
-              Freut euch auf Live-Musik, Auftritte, Kinderprogramm und vieles mehr!
+              Freut euch auf Live-Musik, Auftritten, Kinderprogramm und vieles mehr!
             </p>
             <p className="text-gray-500 text-sm">
               Schaut bald wieder vorbei — es lohnt sich!

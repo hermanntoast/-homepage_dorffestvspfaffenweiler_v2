@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Plakat from "./components/Plakat";
 import Programm from "./components/Programm";
 import Gelaendeplan from "./components/Gelaendeplan";
 import EssenTrinken from "./components/EssenTrinken";
@@ -48,6 +49,7 @@ export default function App() {
 
       <div className="relative backdrop-blur-2xl bg-white/80">
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/10 pointer-events-none" />
+        <Plakat />
         <Programm />
         <Gelaendeplan />
         <EssenTrinken />
