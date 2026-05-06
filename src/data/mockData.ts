@@ -112,7 +112,7 @@ export const vereine: Verein[] = [
     beschreibung: "Landfrauen",
     logo: "/logos/vereine/landfrauen.png",
     website: "https://wolfbachbienen.jimdofree.com/aktuelles/",
-    essen: ["Kuchen", "Salatbowl", "kleine und Große Salatbowl", "Flammkuchen (3 Sorten)"],
+    essen: ["Kuchen", "kleine und große Salatbowl", "Flammkuchen (3 Sorten)"],
     getraenke: ["Kaffee"],
   },
   {
