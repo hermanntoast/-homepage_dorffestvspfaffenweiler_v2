@@ -108,11 +108,11 @@ export const vereine: Verein[] = [
   },
   {
     id: 7,
-    name: "Landfrauen Pfaffenweiler",
+    name: "Landfrauen Pfaffenweiler und Herzogenweiler",
     beschreibung: "Landfrauen",
     logo: "/logos/vereine/landfrauen.png",
     website: "https://wolfbachbienen.jimdofree.com/aktuelles/",
-    essen: ["Kuchen", "Salatbowl", "Beilagensalat", "Flammkuchen (3 Sorten)"],
+    essen: ["Kuchen", "kleine und große Salatbowl", "Flammkuchen (3 Sorten)"],
     getraenke: ["Kaffee"],
   },
   {
@@ -210,7 +210,7 @@ export const gelaendeBereiche: GelaendeBereich[] = [
   { id: "tennis", name: "Tennis", beschreibung: "Tennisclub", verein: "Tennisclub Pfaffenweiler", x: 350, y: 200, width: 70, height: 45, farbe: "#0891b2" },
 
   // Rechts – Landfrauen (18m hoch × 5m breit)
-  { id: "landfrauen", name: "Landfrauen", beschreibung: "Landfrauen", verein: "Landfrauen Pfaffenweiler", x: 350, y: 250, width: 70, height: 180, farbe: "#be185d" },
+  { id: "landfrauen", name: "Landfrauen", beschreibung: "Landfrauen", verein: "Landfrauen Pfaffenweiler und Herzogenweiler", x: 350, y: 250, width: 70, height: 180, farbe: "#be185d" },
 
   // Unten links – JUDO (12m hoch × 6m breit)
   { id: "judo", name: "Judo", beschreibung: "Judosportclub", verein: "Judo Pfaffenweiler", x: 20, y: 390, width: 60, height: 120, farbe: "#7c3aed" },
