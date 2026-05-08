@@ -70,7 +70,7 @@ export default function Hero() {
         </div>
 
         {/* Dorffest */}
-        <h1 className="text-5xl sm:text-6xl md:text-8xl font-black leading-tight tracking-tight mb-6">
+        <h1 className="text-4xl sm:text-6xl md:text-8xl font-black leading-tight tracking-tight mb-6">
           <span
             className={`block text-white transition-all duration-1000 ease-out ${
               loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -88,7 +88,7 @@ export default function Hero() {
             ))}
           </span>
           <span
-            className={`block text-accent-light transition-all duration-1000 ease-out ${
+            className={`block whitespace-nowrap text-accent-light transition-all duration-1000 ease-out ${
               loaded ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-95"
             }`}
             style={{ transitionDelay: "800ms" }}
@@ -136,7 +136,90 @@ export default function Hero() {
             Geländeplan
           </a>
         </div>
+
+        {/* Mobile/Tablet Klosterbrass Highlight Pill */}
+        <a
+          href="#programm"
+          className={`lg:hidden mt-8 inline-flex items-center gap-3 px-5 py-3 rounded-full bg-gradient-to-r from-accent/95 to-accent-light/95 text-gray-900 shadow-xl shadow-accent/30 backdrop-blur-sm border border-white/30 transition-all duration-1000 ease-out hover:scale-105 ${
+            loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+          style={{ transitionDelay: "1700ms" }}
+        >
+          <span className="inline-flex items-center gap-1 text-gray-900">
+            <span className="eq-bar" />
+            <span className="eq-bar" />
+            <span className="eq-bar" />
+            <span className="eq-bar" />
+            <span className="eq-bar" />
+          </span>
+          <span className="text-sm font-extrabold tracking-wide">
+            LIVE: KLOSTERBRASS
+          </span>
+          <span className="text-xs font-semibold opacity-80">Sa · 20 Uhr</span>
+        </a>
       </div>
+
+      {/* Desktop Klosterbrass Floating Sticker */}
+      <a
+        href="#programm"
+        className={`hidden lg:block absolute bottom-16 right-10 xl:right-20 z-20 w-64 transition-all duration-1000 ease-out ${
+          loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+        }`}
+        style={{
+          transitionDelay: "1700ms",
+          opacity: loaded ? Math.max(1 - scrollY / 400, 0) : 0,
+        }}
+      >
+        <div className="ticket-float relative group">
+          {/* Glow */}
+          <div className="absolute -inset-3 bg-gradient-to-r from-accent/50 via-purple-500/30 to-accent/50 rounded-3xl blur-2xl opacity-70 group-hover:opacity-100 transition-opacity" />
+
+          {/* Card */}
+          <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden ring-1 ring-black/5 group-hover:scale-[1.03] transition-transform duration-500">
+            {/* Top stripe */}
+            <div className="flex items-center justify-between px-4 py-2 bg-gradient-to-r from-gray-900 to-gray-800">
+              <div className="flex items-center gap-2">
+                <span className="relative flex w-2 h-2">
+                  <span className="absolute inline-flex w-full h-full rounded-full bg-red-400 opacity-75 animate-ping" />
+                  <span className="relative inline-flex w-2 h-2 rounded-full bg-red-500" />
+                </span>
+                <span className="text-[10px] font-extrabold tracking-[0.2em] text-white uppercase">
+                  Live-Highlight
+                </span>
+              </div>
+              <span className="text-[10px] font-bold tracking-widest text-white/60">
+                SA 20:00
+              </span>
+            </div>
+
+            {/* Logo */}
+            <div className="flex items-center justify-center bg-gradient-to-br from-warm via-white to-warm-dark py-5 px-4">
+              <img
+                src="/logos/bands/klosterbrass.jpeg"
+                alt="Klosterbrass"
+                className="max-h-24 w-auto object-contain"
+              />
+            </div>
+
+            {/* Bottom: equalizer + name */}
+            <div className="flex items-center justify-between px-4 py-3 bg-white border-t border-gray-100">
+              <span className="inline-flex items-end gap-1 text-accent">
+                <span className="eq-bar" />
+                <span className="eq-bar" />
+                <span className="eq-bar" />
+                <span className="eq-bar" />
+                <span className="eq-bar" />
+              </span>
+              <span className="text-sm font-black text-gray-900 tracking-tight">
+                KLOSTERBRASS
+              </span>
+            </div>
+          </div>
+
+          {/* Tape */}
+          <span className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-5 bg-accent/40 -rotate-3 rounded-sm shadow-md" />
+        </div>
+      </a>
 
       {/* Scroll indicator */}
       <div
