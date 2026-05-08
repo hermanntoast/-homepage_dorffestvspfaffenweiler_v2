@@ -128,8 +128,8 @@ export const vereine: Verein[] = [
 
 export const sponsoren: Sponsor[] = [
   { id: 1, name: "BaarFoot", logo: "/logos/sponsoren/Logo_BaarFoot.png", website: "#" },
-  { id: 2, name: "Luxcode", logo: "/logos/sponsoren/Logo_luxcode.png", website: "https://luxcode.io" },
-  { id: 3, name: "Heyn", logo: "/logos/sponsoren/Logo_Heyn.png", website: "#" },
+  { id: 2, name: "LUXCODE", logo: "/logos/sponsoren/Logo_luxcode.png", website: "https://luxcode.io" },
+  { id: 3, name: "Heyn Bau", logo: "/logos/sponsoren/Logo_Heyn.png", website: "#" },
   { id: 4, name: "Merz Reisen", logo: "/logos/sponsoren/Logo_MerzReisen.png", website: "#" },
   { id: 5, name: "Schreinerei Neininger", logo: "/logos/sponsoren/Logo_SchreinereiNeininger.png", website: "#" },
   // { id: 4, name: "Kettner", logo: "/logos/sponsoren/Logo_Kettner.png", website: "#" },

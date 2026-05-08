@@ -18,20 +18,31 @@ export default function Sponsoren() {
         </div>
 
         {hatSponsoren && (
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 sm:gap-6 mb-12">
             {sponsoren.map((sponsor) => (
               <a
                 key={sponsor.id}
                 href={sponsor.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-[calc(50%-8px)] sm:w-[calc(33.333%-11px)] lg:w-[calc(20%-13px)] p-5 sm:p-6 rounded-2xl border-2 border-gray-100 bg-gray-50 hover:shadow-lg hover:border-gray-200 transition-all hover:-translate-y-0.5"
+                title={sponsor.name}
+                className="group relative flex flex-col items-center justify-center aspect-[4/3] p-5 sm:p-6 rounded-2xl bg-white shadow-[0_2px_12px_rgba(15,23,42,0.05)] ring-1 ring-gray-100 hover:shadow-[0_20px_50px_rgba(15,23,42,0.18)] hover:ring-primary/20 transition-all duration-300 hover:scale-[1.08] focus-within:scale-[1.08] hover:z-10 overflow-hidden"
               >
+                {/* Logo */}
                 <img
                   src={sponsor.logo}
                   alt={sponsor.name}
-                  className="max-h-16 sm:max-h-20 w-auto object-contain"
+                  className="max-h-20 sm:max-h-24 w-auto object-contain transition-all duration-500 ease-out group-hover:-translate-y-2 group-focus-within:-translate-y-2"
                 />
+
+                {/* Name ribbon */}
+                <div
+                  className="pointer-events-none absolute bottom-0 inset-x-0 px-3 py-2.5 text-center bg-gradient-to-t from-white via-white/95 to-white/0 translate-y-full group-hover:translate-y-0 group-focus-within:translate-y-0 transition-transform duration-300 ease-out"
+                >
+                  <span className="block text-xs sm:text-sm font-semibold tracking-wide text-gray-900">
+                    {sponsor.name}
+                  </span>
+                </div>
               </a>
             ))}
           </div>

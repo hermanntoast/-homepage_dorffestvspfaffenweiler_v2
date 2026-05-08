@@ -49,7 +49,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="font-semibold text-gray-300 hover:text-white transition-colors underline-offset-2 hover:underline"
             >
-              Luxcode
+              LUXCODE
             </a>
           </p>
         </div>
