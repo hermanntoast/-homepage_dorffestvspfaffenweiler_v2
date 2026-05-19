@@ -24,7 +24,6 @@ export default function EssenTrinken() {
                 <img src={verein.logo} alt={verein.name} className="w-10 h-10 object-contain" />
                 <div>
                   <h3 className="font-bold text-gray-900 leading-tight">{verein.name}</h3>
-                  <p className="text-xs text-gray-500">{verein.beschreibung}</p>
                 </div>
               </div>
 

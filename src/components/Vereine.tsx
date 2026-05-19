@@ -29,12 +29,9 @@ export default function Vereine() {
                   className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform"
                 />
               </div>
-              <h3 className="font-bold text-gray-900 text-sm sm:text-base mb-1 leading-tight">
+              <h3 className="font-bold text-gray-900 text-sm sm:text-base leading-tight">
                 {verein.name}
               </h3>
-              <p className="text-xs sm:text-sm text-gray-500">
-                {verein.beschreibung}
-              </p>
             </a>
           ))}
         </div>
