@@ -216,7 +216,7 @@ export const gelaendeBereiche: GelaendeBereich[] = [
   { id: "grillhuette", name: "Narrenverein", beschreibung: "Narrenzunft", verein: "Narrenverein Wolfbach-Rolli", x: 320, y: 20, width: 80, height: 40, farbe: "#ea580c" },
 
   // Links – KiGA/Schule (6m hoch × 3m breit)
-  { id: "kiga", name: "Schule/Kita", beschreibung: "Grundschule & Kindertagesstätte", verein: "Schule / Kita", x: 20, y: 140, width: 30, height: 60, farbe: "#a855f7" },
+  { id: "kiga", name: "Kita", beschreibung: "Kindertagesstätte", x: 20, y: 140, width: 30, height: 60, farbe: "#a855f7" },
 
   // Links – FC-Stand (15m hoch × 7m breit)
   { id: "fc", name: "FC", beschreibung: "Fußballclub", verein: "FC Pfaffenweiler", x: 20, y: 220, width: 70, height: 150, farbe: "#2563eb" },
@@ -228,7 +228,7 @@ export const gelaendeBereiche: GelaendeBereich[] = [
   { id: "sitzflaeche", name: "Sitzfläche", beschreibung: "Biergarnituren", x: 140, y: 180, width: 140, height: 200, farbe: "#d97706" },
 
   // Rechts – MuT + Kirchenchor (10m hoch × 6m breit)
-  { id: "mut", name: "MuT", beschreibung: "Musik- & Trachtenkapelle", verein: "Musik- & Trachtenkapelle + Kirchenchor", x: 340, y: 80, width: 60, height: 100, farbe: "#16a34a" },
+  { id: "mut", name: "MuT", beschreibung: "Musik- & Trachtenkapelle", verein: "Musik- & Trachtenkapelle", x: 340, y: 80, width: 60, height: 100, farbe: "#16a34a" },
 
   // Rechts – Tennis (7m hoch × 3m breit)
   { id: "tennis", name: "Tennis", beschreibung: "Tennisclub", verein: "Tennisclub Pfaffenweiler", x: 350, y: 200, width: 70, height: 45, farbe: "#0891b2" },

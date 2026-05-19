@@ -79,8 +79,8 @@ export default function Gelaendeplan() {
               {bereiche.map((b) => {
                 const cx = b.x + b.width / 2;
                 const cy = b.y + b.height / 2;
-                const label = b.name;
-                const maxChars = Math.max(Math.floor(b.width / 5.5), 6);
+                const label = b.verein || b.name;
+                const maxChars = Math.max(Math.floor(b.width / 5), 4);
                 const nameLines = wrapText(label, maxChars);
                 const lineH = 10;
                 const totalH = nameLines.length * lineH;
