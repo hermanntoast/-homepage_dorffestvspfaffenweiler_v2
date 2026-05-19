@@ -79,16 +79,11 @@ export default function Gelaendeplan() {
               {bereiche.map((b) => {
                 const cx = b.x + b.width / 2;
                 const cy = b.y + b.height / 2;
-                const label = b.verein || b.name;
-                const isVertical = b.height > b.width * 1.5;
-                // For vertical stands, use height as text space
-                const textSpace = isVertical ? b.height : b.width;
-                const maxChars = Math.max(Math.floor(textSpace / 5.5), 6);
+                const label = b.name;
+                const maxChars = Math.max(Math.floor(b.width / 5.5), 6);
                 const nameLines = wrapText(label, maxChars);
-                const descLines = b.beschreibung ? wrapText(b.beschreibung, maxChars + 4) : [];
-                const allLines = [...nameLines, ...descLines];
                 const lineH = 10;
-                const totalH = allLines.length * lineH;
+                const totalH = nameLines.length * lineH;
                 const startY = cy - totalH / 2 + 7;
 
                 return (
@@ -127,39 +122,10 @@ export default function Gelaendeplan() {
                         {line}
                       </text>
                     ))}
-                    {descLines.map((line, i) => (
-                      <text
-                        key={`d${i}`}
-                        x={cx}
-                        y={startY + (nameLines.length + i) * lineH}
-                        textAnchor="middle"
-                        fill="white"
-                        fontSize="7"
-                        opacity="0.85"
-                        stroke={b.farbe}
-                        strokeWidth="2.5"
-                        paintOrder="stroke"
-                      >
-                        {line}
-                      </text>
-                    ))}
                   </g>
                 </g>
                 );
               })}
-
-              {/* Hüpfburg Hinweis zwischen KjG und KiGA */}
-              <g className="select-none">
-                <text x={SVG_W - 60} y={425} textAnchor="middle" fill="#ec4899" fontSize="9" fontWeight="700">
-                  Hüpfburg
-                </text>
-                <path d={`M${SVG_W - 32} 422 L${SVG_W - 15} 422`} stroke="#ec4899" strokeWidth="1.5" markerEnd="url(#arrowPink)" />
-                <defs>
-                  <marker id="arrowPink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
-                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#ec4899" />
-                  </marker>
-                </defs>
-              </g>
 
               {/* Eingang Label */}
               <text x={175} y={SVG_H - 15} textAnchor="middle" fill="#64748b" fontSize="10" fontWeight="700" letterSpacing="1" className="select-none">
@@ -175,9 +141,6 @@ export default function Gelaendeplan() {
                 <div className="w-10 h-10 rounded-lg flex-shrink-0" style={{ backgroundColor: active.farbe }} />
                 <div>
                   <h3 className="text-lg font-bold text-gray-900">{active.verein || active.name}</h3>
-                  {active.beschreibung && (
-                    <p className="text-gray-600 text-sm">{active.beschreibung}</p>
-                  )}
                 </div>
               </div>
             </div>
