@@ -13,14 +13,14 @@ export default function Vereine() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
           {vereine.map((verein) => (
             <a
               key={verein.id}
               href={verein.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-white rounded-2xl p-5 sm:p-6 text-center hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100"
+              className="group bg-white rounded-2xl p-5 sm:p-6 text-center hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100 w-[calc(50%-8px)] sm:w-[calc(33.333%-16px)] lg:w-[calc(25%-18px)]"
             >
               <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-4 flex items-center justify-center">
                 <img

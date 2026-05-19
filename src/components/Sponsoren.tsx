@@ -18,7 +18,7 @@ export default function Sponsoren() {
         </div>
 
         {hatSponsoren && (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 sm:gap-6 mb-12">
+          <div className="flex flex-wrap justify-center gap-5 sm:gap-6 mb-12">
             {sponsoren.map((sponsor) => (
               <a
                 key={sponsor.id}
@@ -26,7 +26,7 @@ export default function Sponsoren() {
                 target="_blank"
                 rel="noopener noreferrer"
                 title={sponsor.name}
-                className="group relative flex flex-col items-center justify-center aspect-[4/3] p-5 sm:p-6 rounded-2xl bg-white shadow-[0_2px_12px_rgba(15,23,42,0.05)] ring-1 ring-gray-100 hover:shadow-[0_20px_50px_rgba(15,23,42,0.18)] hover:ring-primary/20 transition-all duration-300 hover:scale-[1.08] focus-within:scale-[1.08] hover:z-10 overflow-hidden"
+                className="group relative flex flex-col items-center justify-center aspect-[4/3] p-5 sm:p-6 rounded-2xl bg-white shadow-[0_2px_12px_rgba(15,23,42,0.05)] ring-1 ring-gray-100 hover:shadow-[0_20px_50px_rgba(15,23,42,0.18)] hover:ring-primary/20 transition-all duration-300 hover:scale-[1.08] focus-within:scale-[1.08] hover:z-10 overflow-hidden w-[calc(50%-10px)] sm:w-[calc(33.333%-16px)] lg:w-[calc(20%-20px)]"
               >
                 {/* Logo */}
                 <img

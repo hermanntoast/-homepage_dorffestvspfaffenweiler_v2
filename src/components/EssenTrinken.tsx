@@ -1,6 +1,7 @@
 import { vereine } from "../data/mockData";
 
 export default function EssenTrinken() {
+  const angebote = vereine.filter((v) => v.essen.length > 0 || v.getraenke.length > 0);
   return (
     <section id="essen" className="py-20 sm:py-28">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -14,7 +15,7 @@ export default function EssenTrinken() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          {vereine.map((verein) => (
+          {angebote.map((verein) => (
             <div
               key={verein.id}
               className="rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg transition-shadow overflow-hidden"
