@@ -132,6 +132,8 @@ export const sponsoren: Sponsor[] = [
   { id: 3, name: "Heyn Bau", logo: "/logos/sponsoren/Logo_Heyn.png", website: "#" },
   { id: 4, name: "Merz Reisen", logo: "/logos/sponsoren/Logo_MerzReisen.png", website: "#" },
   { id: 5, name: "Schreinerei Neininger", logo: "/logos/sponsoren/Logo_SchreinereiNeininger.png", website: "#" },
+  { id: 6, name: "Fliesen Hummel", logo: "/logos/sponsoren/Logo_Hummel.png", website: "#" },
+  { id: 7, name: "Fliesenleger Ronny Junker", logo: "/logos/sponsoren/Logo_Fliesenleger.jpg", website: "https://www.fliesenleger-vs.de" },
   // { id: 4, name: "Kettner", logo: "/logos/sponsoren/Logo_Kettner.png", website: "#" },
   // { id: 3, name: "Volksbank", logo: "/logos/sponsoren/Logo_VoBa.png", website: "#" },
   // { id: 4, name: "Merz", logo: "/logos/sponsoren/Logo_Merz.png", website: "#" },
