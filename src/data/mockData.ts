@@ -90,7 +90,7 @@ export const vereine: Verein[] = [
   },
   {
     id: 5,
-    name: "Musik- & Trachtenkapelle",
+    name: "Musik- & Trachtenkapelle und Kirchenchor",
     beschreibung: "Musik- & Trachtenkapelle",
     logo: "/logos/vereine/mut.png",
     website: "#",
